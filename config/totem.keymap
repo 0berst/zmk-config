@@ -104,6 +104,7 @@
 &studio_unlock  &kp Y          &kp X          &kp C           &kp V            &kp B            &kp N        &kp M            &kp COMMA       &kp PERIOD     &kp MINUS  &kp A
                                               &lt 1 ESCAPE    &lt 2 TAB        &lt 3 SPACE      &lt 4 ENTER  &lt 5 BACKSPACE  &lt 0 DELETE
             >;
+        };
 
         Func {
             display-name = "Functions";
@@ -113,6 +114,7 @@
 &studio_unlock  &kp Y          &kp X          &kp C           &kp V            &kp B            &kp N        &kp M            &kp COMMA       &kp PERIOD     &kp MINUS  &kp A
                                               &lt 1 ESCAPE    &lt 2 TAB        &lt 3 SPACE      &lt 4 ENTER  &lt 5 BACKSPACE  &lt 0 DELETE
             >;
+        };
 
         Board {
             display-name = "Board";
