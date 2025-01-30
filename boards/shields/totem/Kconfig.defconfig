@@ -27,6 +27,12 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 5
 
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
 endif
 
 
@@ -37,12 +43,6 @@ config ZMK_SPLIT
 
 # implies ZMK_BATTERY_REPORTING y
 config ZMK_BLE
-    default y
-
-config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
-    default y
-
-config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
     default y
 
 endif
