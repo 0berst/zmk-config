@@ -35,7 +35,14 @@ if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_DONGLE
 config ZMK_SPLIT
     default y
 
+# implies ZMK_BATTERY_REPORTING y
 config ZMK_BLE
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
     default y
 
 endif
