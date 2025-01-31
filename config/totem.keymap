@@ -88,7 +88,7 @@
             display-name = "Symbols";
             bindings = <
                 &kp Q       &kp W       &kp E         &kp R         &kp T          &kp Z        &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp LEFT_BRACKET  &kp P
-                &kp LGUI A  &kp LALT S  &kp LCTRL D   &kp LSHIFT F  &kp G          &kp H        &kp RSHFT J        &kp RCTRL K    &kp RALT L        &kp O
+                &kp A       &kp S       &kp D         &kp F         &kp G          &kp H        &kp J              &kp K          &kp L             &kp O
 &studio_unlock  &kp Y       &kp X       &kp C         &kp V         &kp B          &kp N        &kp M              &kp COMMA      &kp PERIOD        &kp MINUS  &kp A
                                         &lt 1 ESCAPE  &lt 2 TAB     &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE    &lt 0 DELETE
             >;
