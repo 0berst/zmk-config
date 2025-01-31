@@ -21,6 +21,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#include "keys_de.h"
+
 #define Base       0
 #define Sym        1
 #define Num        2
@@ -80,9 +82,9 @@
         Base {
             display-name = "Base";
             bindings = <
-              &kp Q  &kp W          &kp E           &kp R            &kp T          &kp Z        &kp U            &kp I           &kp O          &kp P
-              &kp A  &mt_left LALT S  &mt_left LCTRL D  &mt_left LSHIFT F  &kp G          &kp H        &mt_right RSHFT J   &mt_right RCTRL K  &mt_right RALT L  &kp O
-&kp LEFT_GUI  &kp Y  &kp X          &kp C           &kp V            &kp B          &kp N        &kp M            &kp COMMA       &kp PERIOD     &kp MINUS  &kp A
+              &kp DE_Q  &kp DE_W            &kp DE_E           &kp DE_R              &kp DE_T          &kp DE_Z        &kp DE_U            &kp DE_I           &kp DE_O          &kp DE_P
+              &kp DE_A  &mt_left LALT DE_S  &mt_left LCTRL D   &mt_left LSHIFT DE_F  &kp DE_G          &kp DE_H        &mt_right RSHFT DE_J   &mt_right RCTRL DE_K  &mt_right RALT DE_L  &kp DE_PLUS
+&kp LEFT_GUI  &kp DE_Y  &kp DE_X            &kp DE_C           &kp DE_V              &kp DE_B          &kp DE_N        &kp DE_M            &kp DE_COMMA       &kp DE_PERIOD     &kp DE_MINUS  &kp DE_POUND
                                     &lt 1 ESCAPE    &lt 2 TAB        &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE  &lt 0 DELETE
             >;
         };
@@ -90,10 +92,10 @@
         Sym {
             display-name = "Symbols";
             bindings = <
-                &kp Q       &kp W       &kp E         &kp R         &kp T          &kp Z        &kp RA(A)  &kp ASTERISK  &kp RA(O)  &kp P
-                &kp A       &trans       &trans         &trans         &kp G          &kp H        &trans              &trans          &trans             &kp O
-&studio_unlock  &kp Y       &kp X       &kp C         &kp V         &kp B          &kp N        &kp M              &kp COMMA      &kp PERIOD        &kp MINUS  &kp A
-                                        &lt 1 ESCAPE  &lt 2 TAB     &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE    &lt 0 DELETE
+              &kp DE_Q   &kp DE_W     &kp DE_E    &kp DE_R        &kp DE_T          &kp DE_Z        &kp DE_UE       &kp DE_I           &kp DE_OE         &kp DE_P
+              &kp DE_AE  &trans       &trans      &trans          &trans            &kp DE_H        &trans          &trans             &trans            &kp DE_PLUS
+&trans  &kp DE_Y  &kp DE_X            &kp DE_C    &kp DE_V        &kp DE_B          &kp DE_N        &kp DE_M        &kp DE_COMMA       &kp DE_PERIOD     &kp DE_MINUS  &kp DE_POUND
+                                    &lt 1 ESCAPE    &lt 2 TAB        &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE  &lt 0 DELETE
             >;
         };
 
