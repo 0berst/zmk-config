@@ -40,7 +40,6 @@
     behaviors {
         lh_hm: lh_hm {
             compatible = "zmk,behavior-hold-tap";
-            label = "LH_HM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -52,7 +51,6 @@
 
         rh_hm: rh_hm {
             compatible = "zmk,behavior-hold-tap";
-            label = "RH_HM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
