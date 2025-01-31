@@ -38,25 +38,28 @@
 
 / {
     behaviors {
-        lh_hm: lh_hm {
+        // left-hand and right-hand homerow mods, based on mod-tap behavior
+        mt_left: mt_left {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "tap-unless-interrupted";
-            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <20>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
         };
 
-        rh_hm: rh_hm {
+        mt_right: mt_right {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "tap-unless-interrupted";
-            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <20>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 25>;
         };
     };
@@ -78,7 +81,7 @@
             display-name = "Base";
             bindings = <
               &kp Q  &kp W          &kp E           &kp R            &kp T          &kp Z        &kp U            &kp I           &kp O          &kp P
-              &kp A  &lh_hm LALT S  &lh_hm LCTRL D  &lh_hm LSHIFT F  &kp G          &kp H        &rh_hm RSHFT J   &rh_hm RCTRL K  &rh_hm RALT L  &kp O
+              &kp A  &mt_left LALT S  &mt_left LCTRL D  &mt_left LSHIFT F  &kp G          &kp H        &mt_right RSHFT J   &mt_right RCTRL K  &mt_right RALT L  &kp O
 &kp LEFT_GUI  &kp Y  &kp X          &kp C           &kp V            &kp B          &kp N        &kp M            &kp COMMA       &kp PERIOD     &kp MINUS  &kp A
                                     &lt 1 ESCAPE    &lt 2 TAB        &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE  &lt 0 DELETE
             >;
@@ -87,8 +90,8 @@
         Sym {
             display-name = "Symbols";
             bindings = <
-                &kp Q       &kp W       &kp E         &kp R         &kp T          &kp Z        &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp LEFT_BRACKET  &kp P
-                &kp A       &kp S       &kp D         &kp F         &kp G          &kp H        &kp J              &kp K          &kp L             &kp O
+                &kp Q       &kp W       &kp E         &kp R         &kp T          &kp Z        &kp RA(A)  &kp ASTERISK  &kp RA(O)  &kp P
+                &kp A       &trans       &trans         &trans         &kp G          &kp H        &trans              &trans          &trans             &kp O
 &studio_unlock  &kp Y       &kp X       &kp C         &kp V         &kp B          &kp N        &kp M              &kp COMMA      &kp PERIOD        &kp MINUS  &kp A
                                         &lt 1 ESCAPE  &lt 2 TAB     &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE    &lt 0 DELETE
             >;
